@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c95a740dd7fed4e8ba575197c8c890, type: 3}
+  m_Name: Dessert
+  m_EditorClassIdentifier: Assembly-CSharp::TileAtlas
+  dirt: {fileID: 11400000, guid: b3de8541f1dc6174387be9e31662f645, type: 2}
+  grass: {fileID: 11400000, guid: b3de8541f1dc6174387be9e31662f645, type: 2}
+  stone: {fileID: 11400000, guid: b3de8541f1dc6174387be9e31662f645, type: 2}
+  log: {fileID: 0}
+  leaf: {fileID: 0}
+  tallGrass: {fileID: 11400000, guid: cabf9feac246c3043b557855541a14c3, type: 2}
+  silver: {fileID: 0}
+  coal: {fileID: 0}
+  iron: {fileID: 0}
+  gold: {fileID: 0}
+  diamond: {fileID: 0}

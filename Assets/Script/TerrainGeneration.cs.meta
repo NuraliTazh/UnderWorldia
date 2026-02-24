@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 54ac39e881a88b44e8ef80d7b1580f5f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tileAtlas: {fileID: 11400000, guid: 0dd4b31e89e9dde469d2e58ccb51304a, type: 2}
+  - biomeMap: {instanceID: 0}
+  - caveNoiseTexture: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
