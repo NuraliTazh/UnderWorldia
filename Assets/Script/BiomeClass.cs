@@ -8,15 +8,13 @@ public class BiomeClass
     public TileAtlas tileAtlas;
 
     [Header("Noise")]
-    public float terrainFreq = 0.05f;
-    public float caveFreq = 0.05f;
     public Texture2D caveNoiseTexture;
 
     [Header("Generation")]
     public bool generateCaves = true;
     public int dirtLayerHeight = 5;
     public float surfaceValue = 0.25f;
-    public float heightMultiplier = 25f;
+    public float heightMultiplier = 4f;
 
     [Header("Cherry on the top")]
     public int treeChance = 15;
