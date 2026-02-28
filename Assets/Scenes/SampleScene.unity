@@ -256,7 +256,7 @@ MonoBehaviour:
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 22899
     ctime1: 31226
-    ctime2: 46183
+    ctime2: 43562
     ctime3: 65535
     ctime4: 0
     ctime5: 0
@@ -303,11 +303,6 @@ MonoBehaviour:
     size: 0.8
     maxSpawnHeight: 25
     spreadTexture: {fileID: 0}
-  biomeCols:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &448927341
 Transform:
   m_ObjectHideFlags: 0

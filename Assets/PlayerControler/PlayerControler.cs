@@ -7,12 +7,13 @@ public class PlayerControler : MonoBehaviour
     public bool onGrownd;
 
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
+    private Animator anim;
+    private float horizontal;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -27,9 +28,9 @@ public class PlayerControler : MonoBehaviour
             onGrownd = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        horizontal = Input.GetAxis("Horizontal");
         float jump = Input.GetAxisRaw("Jump");
         float vertical = Input.GetAxisRaw("Vertical");
 
@@ -47,7 +48,10 @@ public class PlayerControler : MonoBehaviour
         }
 
         rb.linearVelocity = movement;
+    }
 
-
+    private void Update()
+    {
+        anim.SetFloat("horizontal", horizontal);
     }
 }
