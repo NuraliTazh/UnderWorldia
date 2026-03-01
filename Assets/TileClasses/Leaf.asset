@@ -15,3 +15,5 @@ MonoBehaviour:
   tileName: Leaf
   tileSprites:
   - {fileID: -2613479253483919953, guid: fad50ac5c9d34db4f83022af77838bed, type: 3}
+  inBackgrownd: 1
+  tileDrop: 0

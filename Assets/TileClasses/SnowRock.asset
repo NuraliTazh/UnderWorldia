@@ -15,3 +15,5 @@ MonoBehaviour:
   tileName: Rock
   tileSprites:
   - {fileID: -2182124076254010665, guid: c11c2143b27f1a145baab52becc9e2a9, type: 3}
+  inBackgrownd: 1
+  tileDrop: 0

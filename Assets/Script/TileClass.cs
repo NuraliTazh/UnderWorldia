@@ -8,5 +8,7 @@ public class TileClass: ScriptableObject
 {
     public string tileName;
     public Sprite[] tileSprites;
+    public bool inBackgrownd = true;
+    public bool tileDrop = true;
 
 }

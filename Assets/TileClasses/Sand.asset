@@ -15,3 +15,4 @@ MonoBehaviour:
   tileName: Sand
   tileSprites:
   - {fileID: 4360390788417139489, guid: b8021a000fd89074aa60a9a9de744ba6, type: 3}
+  inBackgrownd: 0

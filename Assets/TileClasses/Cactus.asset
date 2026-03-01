@@ -15,3 +15,4 @@ MonoBehaviour:
   tileName: Cactus
   tileSprites:
   - {fileID: -2398928150587632790, guid: b110643f52d929345a451a77c886eb9e, type: 3}
+  isSolid: 0
