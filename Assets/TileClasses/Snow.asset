@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Snow
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
   tileName: Snow
+  wallVariant: {fileID: 11400000, guid: d024ecdbb0e675141bfc6cb79065612f, type: 2}
   tileSprites:
   - {fileID: 5251734906795025119, guid: 50f79debc7400b7429fdc7bd7b0beb93, type: 3}
   - {fileID: -856085545168688419, guid: 117907738ebdc2d4880c98657692f30c, type: 3}
   inBackgrownd: 0
+  tileDrop: 1

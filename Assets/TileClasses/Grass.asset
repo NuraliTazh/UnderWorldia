@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Grass
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
   tileName: Grass
+  wallVariant: {fileID: 0}
   tileSprites:
   - {fileID: -7958769179885505039, guid: 897d07bfe378e274d9053931548f3775, type: 3}
   inBackgrownd: 0
+  tileDrop: 1

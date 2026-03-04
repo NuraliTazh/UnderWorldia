@@ -7,6 +7,7 @@ MonoImporter:
   - dirt: {fileID: 11400000, guid: 5503ea855fee9664182cac58e2d95a59, type: 2}
   - grass: {fileID: 11400000, guid: 31fe309e272327a4d95a169be33e01ab, type: 2}
   - stone: {fileID: 11400000, guid: cac378395f9f1e048b88629f321640c7, type: 2}
+  - stone_Wall: {fileID: 11400000, guid: e9ae2ec4fb7e0a24381c97bd3b73cd60, type: 2}
   - log: {fileID: 11400000, guid: 8d24edf4c0992af4394a52dfaec8d5c1, type: 2}
   - leaf: {fileID: 11400000, guid: 4237b904d19b10d439fe0b69b31ac481, type: 2}
   - tallGrass: {fileID: 11400000, guid: 20e2b3b18edfb4f4696af25dda86f729, type: 2}

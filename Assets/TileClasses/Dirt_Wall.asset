@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a5c571d22dca1f4ab23266be195543a, type: 3}
-  m_Name: Dirt
+  m_Name: Dirt_Wall
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
-  tileName: Dirt
-  wallVariant: {fileID: 11400000, guid: ee7481b014bb2c5459bfe934c6aca365, type: 2}
+  tileName: Dirt Wall
+  wallVariant: {fileID: 0}
   tileSprites:
   - {fileID: 5634026908348037240, guid: 92e1f4c9c8323304aa8e46b35dd60f21, type: 3}
   - {fileID: 1625462700159154869, guid: cd8371056a7706b4fbc7a9a444b2731b, type: 3}
-  inBackgrownd: 0
+  inBackgrownd: 1
   tileDrop: 1

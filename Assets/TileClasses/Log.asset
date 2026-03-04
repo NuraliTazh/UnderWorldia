@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Log
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
   tileName: Log
+  wallVariant: {fileID: 0}
   tileSprites:
   - {fileID: 6535173978316254009, guid: 38fd73e3e4cdca54590cf2006b7df23d, type: 3}
-  isSolid: 0
+  inBackgrownd: 1
+  tileDrop: 1
