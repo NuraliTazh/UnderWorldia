@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Leaf
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
   tileName: Leaf
+  wallVariant: {fileID: 0}
   tileSprites:
   - {fileID: -2613479253483919953, guid: fad50ac5c9d34db4f83022af77838bed, type: 3}
-  inBackgrownd: 1
-  tileDrop: 0
+  inBackground: 1
+  tileDrop: {fileID: 0}
+  naturallyPlaced: 1

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Inventory inventory;
+    public bool inventoryShowing = false;
     public TileClass selectedTile;
 
     public int playerRange;
@@ -9,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     public float jumpForce;
-    public bool onGrownd;
+    public bool onGround;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -22,10 +24,11 @@ public class PlayerController : MonoBehaviour
     public Vector2 spawnPos;
     public TerrainGeneration terrainGenerator;
 
-    private void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        inventory = GetComponent<Inventory>();
     }
 
     public void Spawn()
@@ -35,19 +38,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.CompareTag("Grownd"))
-            onGrownd = true;
+        if (col.CompareTag("Ground"))
+            onGround = true;
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.CompareTag("Grownd"))
-            onGrownd = false;
+        if (col.CompareTag("Ground"))
+            onGround = false;
     }
 
     private void FixedUpdate()
     {
-        horizontal = Input.GetAxis("Horizontal");
         float jump = Input.GetAxisRaw("Jump");
         float vertical = Input.GetAxisRaw("Vertical");
 
@@ -60,7 +62,7 @@ public class PlayerController : MonoBehaviour
         
         if (vertical > 0.1f || jump > 0.1f)
         {
-            if (onGrownd)
+            if (onGround)
                 movement.y = jumpForce;
         }
 
@@ -69,8 +71,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        horizontal = Input.GetAxis("Horizontal");
         hit = Input.GetMouseButtonDown(0);
         place = Input.GetMouseButton(1);
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            inventoryShowing = !inventoryShowing;
+        }
 
         if (Vector2.Distance(transform.position, mousePos) <= playerRange && Vector2.Distance(transform.position, mousePos) > 1f)
         {
@@ -86,6 +94,8 @@ public class PlayerController : MonoBehaviour
 
         mousePos.x = Mathf.RoundToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition).x - 0.5f); 
         mousePos.y = Mathf.RoundToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition).y - 0.5f); 
+
+        inventory.inventoryUI.SetActive(inventoryShowing);
 
         anim.SetFloat("horizontal", horizontal);
         anim.SetBool("hit", hit || place);

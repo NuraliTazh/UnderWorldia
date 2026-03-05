@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Iron
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
   tileName: Iron
+  wallVariant: {fileID: 11400000, guid: e9ae2ec4fb7e0a24381c97bd3b73cd60, type: 2}
   tileSprites:
   - {fileID: 8504367182612751133, guid: 3151d956952c2184ba60e3702c036145, type: 3}
   - {fileID: -2414620540100412168, guid: b009f661124e51548a38b8ec55445250, type: 3}
   inBackgrownd: 0
+  tileDrop: {fileID: 8824806939975090186, guid: 6e267245f9d8cea4d9802f6d197778d9, type: 3}
+  naturallyPlaced: 1

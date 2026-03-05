@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: TallGrass
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
   tileName: TallGrass
+  wallVariant: {fileID: 0}
   tileSprites:
   - {fileID: -4133103754698827007, guid: 00708cb2e194c6e45907ac312bd041da, type: 3}
   - {fileID: -2785507422065567611, guid: 051e4e23ac448d64091437a79e0eb700, type: 3}
   - {fileID: 4688471169535995337, guid: 89251d93a6d490f4ab33beda9ff16137, type: 3}
   - {fileID: 2400719064819716107, guid: 89251d93a6d490f4ab33beda9ff16137, type: 3}
   - {fileID: -7947570480267606925, guid: c727da94035dbcf42afc956553d5ec53, type: 3}
-  inBackgrownd: 1
-  tileDrop: 0
+  inBackground: 1
+  tileDrop: {fileID: 0}
+  naturallyPlaced: 1

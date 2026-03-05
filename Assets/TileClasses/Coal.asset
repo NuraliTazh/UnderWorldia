@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Coal
   m_EditorClassIdentifier: Assembly-CSharp::TileClass
   tileName: Coal
+  wallVariant: {fileID: 11400000, guid: e9ae2ec4fb7e0a24381c97bd3b73cd60, type: 2}
   tileSprites:
   - {fileID: -6051725314337450559, guid: eebc7db2ec91cfd4785959aa02d6365c, type: 3}
   - {fileID: -5200714245789493288, guid: 2c7d5ca2eb5dda74fa735598368c39f6, type: 3}
   inBackgrownd: 0
+  tileDrop: {fileID: -2060112510601662013, guid: 00057383eba776744a4903e4c9ca5ac1, type: 3}
+  naturallyPlaced: 1
