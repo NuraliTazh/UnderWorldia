@@ -409,28 +409,6 @@ public class TerrainGeneration : MonoBehaviour
                     PlaceTile(tile, x, y, isNaturallyPlaced);
                 }
             }
-            else
-            {
-                if (GetTileFromWorld(x + 1, y) ||
-                    GetTileFromWorld(x - 1, y) ||
-                    GetTileFromWorld(x, y + 1) ||
-                    GetTileFromWorld(x, y - 1))
-                {
-                    if (!GetTileFromWorld(x, y))
-                    {
-                        RemoveLightSourse(x, y);
-                        PlaceTile(tile, x, y, isNaturallyPlaced);
-                    }
-                    else
-                    {
-                        if (GetTileFromWorld(x, y).inBackground)
-                        {
-                            RemoveLightSourse(x, y);
-                            PlaceTile(tile, x, y, isNaturallyPlaced);
-                        }
-                    }
-                }
-            }
         }
     }
     public void PlaceTile(TileClass tile, int x, int y, bool isNaturallyPlaced)
