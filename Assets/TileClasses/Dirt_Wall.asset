@@ -15,8 +15,7 @@ MonoBehaviour:
   tileName: Dirt Wall
   wallVariant: {fileID: 0}
   tileSprites:
-  - {fileID: 5634026908348037240, guid: 92e1f4c9c8323304aa8e46b35dd60f21, type: 3}
-  - {fileID: 1625462700159154869, guid: cd8371056a7706b4fbc7a9a444b2731b, type: 3}
+  - {fileID: 21300000, guid: 92e1f4c9c8323304aa8e46b35dd60f21, type: 3}
   inBackground: 1
   tileDrop: {fileID: 0}
   naturallyPlaced: 1

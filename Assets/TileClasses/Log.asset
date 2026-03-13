@@ -15,7 +15,7 @@ MonoBehaviour:
   tileName: Log
   wallVariant: {fileID: 0}
   tileSprites:
-  - {fileID: 6535173978316254009, guid: 38fd73e3e4cdca54590cf2006b7df23d, type: 3}
+  - {fileID: 21300000, guid: 38fd73e3e4cdca54590cf2006b7df23d, type: 3}
   inBackground: 1
-  tileDrop: {fileID: 6535173978316254009, guid: 38fd73e3e4cdca54590cf2006b7df23d, type: 3}
+  tileDrop: {fileID: 21300000, guid: 38fd73e3e4cdca54590cf2006b7df23d, type: 3}
   naturallyPlaced: 1

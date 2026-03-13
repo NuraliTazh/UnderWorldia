@@ -14,7 +14,6 @@ public class TileAtlas : ScriptableObject
     public TileClass tallGrass;
 
     [Header("Ores")]
-    public TileClass silver;
     public TileClass coal;
     public TileClass iron;
     public TileClass gold;

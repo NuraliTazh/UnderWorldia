@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool inventoryShowing = false;
     public TileClass selectedTile;
 
     public int playerRange;

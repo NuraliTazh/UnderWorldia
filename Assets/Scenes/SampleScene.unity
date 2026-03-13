@@ -749,6 +749,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 282658284823518449, guid: 98a077cdab9ce84488a498a343839a07, type: 3}
+      propertyPath: inventoryShowing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282658284823518449, guid: 98a077cdab9ce84488a498a343839a07, type: 3}
       propertyPath: terrainGenerator
       value: 
       objectReference: {fileID: 448927340}

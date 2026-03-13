@@ -15,7 +15,7 @@ MonoBehaviour:
   tileName: Leaf
   wallVariant: {fileID: 0}
   tileSprites:
-  - {fileID: -2613479253483919953, guid: fad50ac5c9d34db4f83022af77838bed, type: 3}
+  - {fileID: 21300000, guid: fad50ac5c9d34db4f83022af77838bed, type: 3}
   inBackground: 1
   tileDrop: {fileID: 0}
   naturallyPlaced: 1

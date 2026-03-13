@@ -15,7 +15,7 @@ MonoBehaviour:
   tileName: Rock
   wallVariant: {fileID: 0}
   tileSprites:
-  - {fileID: -2182124076254010665, guid: c11c2143b27f1a145baab52becc9e2a9, type: 3}
+  - {fileID: 21300000, guid: c11c2143b27f1a145baab52becc9e2a9, type: 3}
   inBackground: 1
   tileDrop: {fileID: 0}
   naturallyPlaced: 1

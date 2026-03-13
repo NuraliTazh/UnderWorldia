@@ -15,8 +15,8 @@ MonoBehaviour:
   tileName: DeadGrass
   wallVariant: {fileID: 0}
   tileSprites:
-  - {fileID: 5502506095719556529, guid: 363ff1ee0b15f6d49ad0938b2078b28a, type: 3}
-  - {fileID: -5091150573889657727, guid: e92ca02fd77f654418d150e1c85073e1, type: 3}
+  - {fileID: 21300000, guid: 363ff1ee0b15f6d49ad0938b2078b28a, type: 3}
+  - {fileID: 21300000, guid: e92ca02fd77f654418d150e1c85073e1, type: 3}
   inBackground: 1
   tileDrop: {fileID: 0}
   naturallyPlaced: 1

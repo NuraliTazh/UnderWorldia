@@ -63,7 +63,7 @@ public class TerrainGeneration : MonoBehaviour
         world_BackgroundObjects = new GameObject[worldSize, worldSize];
         //initilise light
         worldTilesMap = new Texture2D(worldSize, worldSize);
-        //worldTilesMap.filterMode = FilterMode.Point; Do light more like pixel
+        worldTilesMap.filterMode = FilterMode.Point; //Do light more like pixel
         lightShader.SetTexture("_ShadowTex", worldTilesMap);
 
         for (int x = 0; x < worldSize; x++)
@@ -249,7 +249,7 @@ public class TerrainGeneration : MonoBehaviour
 
             for (int y = 0; y < worldSize; y++)
             {
-                curBiome = GetCurrentBiome(x, y);
+                curBiome = GetCurrentBiome(x, y); //Определение текущего биома
                 height = Mathf.PerlinNoise((x + seed) * terrainFreq, seed * terrainFreq) * curBiome.heightMultiplier + heightAddition;
                 if (x == worldSize / 2)
                     player.spawnPos = new Vector2(x, height + 2);
@@ -294,6 +294,7 @@ public class TerrainGeneration : MonoBehaviour
                 {
                     PlaceTile(tileClass, x, y, true);
                 }
+
                 if (y >= height - 1)
                 {
                     int t = Random.Range(0, curBiome.treeChance);
@@ -409,24 +410,44 @@ public class TerrainGeneration : MonoBehaviour
                     PlaceTile(tile, x, y, isNaturallyPlaced);
                 }
             }
+            else
+            {
+                if (GetTileFromWorld(x + 1, y) ||
+                    GetTileFromWorld(x - 1, y) ||
+                    GetTileFromWorld(x, y + 1) ||
+                    GetTileFromWorld(x, y - 1))
+                {
+
+                    if (!GetTileFromWorld(x, y))
+                    {
+                        RemoveLightSourse(x, y);
+                        PlaceTile(tile, x, y, isNaturallyPlaced);
+                    }
+                    else
+                    {
+                        if (GetTileFromWorld(x, y).inBackground)
+                        {
+                            RemoveLightSourse(x, y);
+                            PlaceTile(tile, x, y, isNaturallyPlaced);
+                        }
+                    }
+                }
+            }
         }
     }
+    
     public void PlaceTile(TileClass tile, int x, int y, bool isNaturallyPlaced)
     { 
-        if (x >= 0 && x < worldSize && y >= 0 && y < worldSize)
+        if (x >= 0 && x < worldSize && y >= 0 && y < worldSize) //Данная проверка предотвращает выход за границы игрового мира
         {
-            GameObject newTile = new GameObject();
+            GameObject newTile = new GameObject(); //конкретный блок игрового мира
+            int chunkCoord = x / chunkSize; //чанк используется как родительский объект
+            newTile.transform.parent = worldChunks[chunkCoord].transform; //позволяет группировать блоки внутри чанков
+            newTile.AddComponent<SpriteRenderer>(); //отображения блока
+            int spriteIndex = Random.Range(0, tile.tileSprites.Length); //блок может иметь несколько вариантов спрайтов
+            newTile.GetComponent<SpriteRenderer>().sprite = tile.tileSprites[spriteIndex]; //выбранный спрайт устанавливается
 
-            int chunkCoord = x / chunkSize;
-
-            newTile.transform.parent = worldChunks[chunkCoord].transform;
-
-            newTile.AddComponent<SpriteRenderer>();
-
-            int spriteIndex = Random.Range(0, tile.tileSprites.Length);
-            newTile.GetComponent<SpriteRenderer>().sprite = tile.tileSprites[spriteIndex];
-
-            worldTilesMap.SetPixel(x, y, Color.black);
+            worldTilesMap.SetPixel(x, y, Color.black); //При размещении блока соответствующий пиксель устанавливается в чёрный цвет
             if (tile.inBackground)
             {
                 newTile.GetComponent<SpriteRenderer>().sortingOrder = -10;
@@ -448,13 +469,13 @@ public class TerrainGeneration : MonoBehaviour
                 newTile.tag = "Ground";
             }
 
-            newTile.name = tile.tileSprites[0].name;
-            newTile.transform.position = new Vector2(x + 0.5f, y + 0.5f);
+            newTile.name = tile.tileSprites[0].name; //объекту присваивается имя
+            newTile.transform.position = new Vector2(x + 0.5f, y + 0.5f); //позиция в игровом мире
 
-            TileClass newTileClass = TileClass.CreateInstance(tile, isNaturallyPlaced);
+            TileClass newTileClass = TileClass.CreateInstance(tile, isNaturallyPlaced); //хранения информации о блоке
 
-            AddObjectToWorld(x, y, newTile, newTileClass);
-            AddTileToWorld(x, y, newTileClass);
+            AddObjectToWorld(x, y, newTile, newTileClass); //хранения визуального объекта
+            AddTileToWorld(x, y, newTileClass); //хранения логической информации
         }
     }
 

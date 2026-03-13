@@ -15,8 +15,8 @@ MonoBehaviour:
   tileName: Diamond
   wallVariant: {fileID: 11400000, guid: e9ae2ec4fb7e0a24381c97bd3b73cd60, type: 2}
   tileSprites:
-  - {fileID: 3532146273704821803, guid: 62946236e59cada40a5444c24e3d73be, type: 3}
-  - {fileID: 3925046522907753492, guid: ef3cca9e042467441896a1870ab42fc8, type: 3}
-  inBackgrownd: 0
+  - {fileID: 21300000, guid: 62946236e59cada40a5444c24e3d73be, type: 3}
+  - {fileID: 21300000, guid: ef3cca9e042467441896a1870ab42fc8, type: 3}
+  inBackground: 0
   tileDrop: {fileID: 1960420179683342151, guid: 2e74cae9278b01d469c3beff3670063d, type: 3}
   naturallyPlaced: 1

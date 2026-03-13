@@ -15,7 +15,7 @@ MonoBehaviour:
   tileName: Grass
   wallVariant: {fileID: 0}
   tileSprites:
-  - {fileID: -7958769179885505039, guid: 897d07bfe378e274d9053931548f3775, type: 3}
+  - {fileID: 21300000, guid: 897d07bfe378e274d9053931548f3775, type: 3}
   inBackground: 0
-  tileDrop: {fileID: 5634026908348037240, guid: 92e1f4c9c8323304aa8e46b35dd60f21, type: 3}
+  tileDrop: {fileID: 21300000, guid: 92e1f4c9c8323304aa8e46b35dd60f21, type: 3}
   naturallyPlaced: 1

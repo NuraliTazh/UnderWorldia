@@ -15,7 +15,7 @@ MonoBehaviour:
   tileName: Cactus
   wallVariant: {fileID: 0}
   tileSprites:
-  - {fileID: -2398928150587632790, guid: b110643f52d929345a451a77c886eb9e, type: 3}
+  - {fileID: 21300000, guid: b110643f52d929345a451a77c886eb9e, type: 3}
   inBackground: 1
-  tileDrop: {fileID: -2398928150587632790, guid: b110643f52d929345a451a77c886eb9e, type: 3}
+  tileDrop: {fileID: 21300000, guid: b110643f52d929345a451a77c886eb9e, type: 3}
   naturallyPlaced: 1
